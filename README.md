@@ -267,7 +267,7 @@ scale = len(_)*dx # scale accordingly
 ax.plot(x, norm.pdf(x, mu, sigma)*scale) # compute theoritical PDF and draw it
 ```
 
-![Histogramme à inserez ici](histogramme.png "Histogramme du ratio d'abondance en fonction du nombre de protéines concernées")
+![Histogramme à inserez ici](histogramme.png)
 
 ##### 5. Quelles remarques peut-on faire à l'observation de l'histogramme et de la loi théorique?
 
