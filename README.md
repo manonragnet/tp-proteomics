@@ -248,10 +248,8 @@ df.loc[ df['Gene Symbol'].isin(['fadR', 'arcA'] ) ]
 
 ##### 3. A partir de cette échantillon de ratio d'abondance,  estimez la moyenne $\mu$ et l'ecart-type $\sigma$ d'une loi normale.
 ```
-print(plt.hist(df.iloc[::,4],bins=20))
-
-
-
+np.mean(abondance) #-0.6467130248461945
+np.std(abondance) #0.46711093152335265
 ```
 
 ##### 4. Superposez la densité de probabilité de cette loi sur l'histogramme. Attention, la densité de probabilité devra être mis à l'echelle de l'histogramme (cf ci-dessous)
