@@ -127,39 +127,46 @@ La lecture des données au format tabulé est l'occasion de se familliariser ave
 La fonction `read_csv` accepte différents [arguments](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html) de format de données très utiles.
 
 ```python
-df = pandas.read_csv()
+df = pandas.read_csv(data/TCL_wt1.tsv)
 ```
 
 Quel est le type de l'objet `df`?
 ```
-
+df est un DataFrame pandas
 ```
 
 ##### Descriptions d'une table de données
 Que permettent les méthodes suivantes?
 ###### df.shape
 ```
+afficher la taille du dataframe sous la forme (nombre de lignes, nombre de colonnes)
 ```
 ###### df.head()
 ```
+afficher les premieres lignes (5 premieres par défaut) du dataframe
 ```
 ###### df.tail()
 ```
+afficher les (5 par défaut) dernières lignes du dataframe
 ```
 ###### df.columns
 ```
+affiche les noms de colonnes
 ```
 ###### df.dtypes
 ```
+affiche les types de chaque colonnes
 ```
 ###### df.info
 ```
 ```
 ###### df.describe()
 ```
+
 ```
 ###### df.dropna()
 ```
+retire les lignes ayant des valeurs manquantes (#NA) du dataframe
 ```
 
 ##### Accès aux éléments d'une table de données
@@ -179,17 +186,18 @@ On peut accéder aux valeurs du DataFrame via des indices ou plages d'indice. La
 Il y a différentes manières de le faire, l'utilisation de `.iloc[slice_ligne,slice_colonne]` constitue une des solutions les plus simples. N'oublions pas que shape permet d'obtenir les dimensions (lignes et colonnes) du DataFrame.
 ###### Acceder aux cinq premières lignes de toutes les colonnes
 ```python
+df.iloc[:5]
 
 ```
 
 ###### Acceder à toutes les lignes de la dernière colonne
 ```python
-
+df.iloc[::,6]
 ```
 
 ###### Acceder aux cinq premières lignes des colonnes 0, 2 et 3
 ```python
-
+df.iloc[:5,[0,2,3]]
 ```
 
 ##### Conversion de type
@@ -241,6 +249,8 @@ df.loc[ df['Gene Symbol'].isin(['fadR', 'arcA'] ) ]
 
 ##### 3. A partir de cette échantillon de ratio d'abondance,  estimez la moyenne $\mu$ et l'ecart-type $\sigma$ d'une loi normale.
 ```
+print(plt.hist(df.iloc[::,4],bins=20))
+
 
 
 ```
