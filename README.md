@@ -270,7 +270,7 @@ ax.plot(x, norm.pdf(x, mu, sigma)*scale) # compute theoritical PDF and draw it
 ##### 5. Quelles remarques peut-on faire à l'observation de l'histogramme et de la loi théorique?
 
 ```
-
+l'histogramme des données expérimentales ne suit pas vraiment la loi normale attendue
 
 ```
 
